@@ -243,7 +243,7 @@ num_layers = 2
 
 # Defining ANN Architechture
 model_nn = RNN(input_size, hidden_size, num_layers, num_classes).to(device)
-model_nn.load_state_dict(torch.load(r"C:\Users\Azhar Aulia Saputra\MY_CODE\PyTorch for Action Recognition\model_lstm.pkl"))
+model_nn.load_state_dict(torch.load(r"C:\Users\Azhar Aulia Saputra\MY_CODE\PyTorch for Action Recognition\model_gru.pkl"))
 model_nn.to(device)
 model_nn.eval()
 
@@ -668,7 +668,7 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
                             #print("d_timer_comp: " + str(d_timer_comp))
                         
                         else:
-                            #>>>>>>>>>>>>>>>>>>>> bug
+                            #>>>>>>>>>>>>>>>>>>>> trial
                             timer = round(time.time()-start_time,2)/2
 
                             if (d_timer_comp - timer) != 0:
