@@ -233,4 +233,4 @@ with torch.no_grad():
     print(f'Accuracy of the network : {acc} %')
 
 # Save the Model
-torch.save(model.state_dict(), 'model_lstm_01.pkl')
+torch.save(model.state_dict(), 'model_gru.pkl')
